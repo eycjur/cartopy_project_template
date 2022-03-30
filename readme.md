@@ -56,6 +56,7 @@ poetry config --list
 ## Installation
 ```bash
 git clone https://github.com/eycjur/cartopy_project_template.git
+cd cartopy_project_template
 poetry  install
 ```
 
