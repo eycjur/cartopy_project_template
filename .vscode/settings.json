@@ -1,0 +1,10 @@
+{
+    "extensions.ignoreRecommendations": false,
+	"python.envFile": "${workspaceFolder}/.env",
+	"python.defaultInterpreterPath": "${workspaceFolder}/.env",
+    "search.exclude": {
+        "**/.venv": true,
+        "**/__pycache__": true,
+        "**/.*_cache": true,
+    },
+}
