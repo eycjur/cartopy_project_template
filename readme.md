@@ -31,6 +31,11 @@ source ~/.bashrc
 pyenvを利用してpython3.9.4をインストールする
 
 ```bash
+# 必要なライブラリ(https://zenn.dev/neruo/articles/install-pyenv-on-ubuntu)
+sudo apt install -y \
+  libffi-dev libssl-dev zlib1g-dev liblzma-dev tk-dev \
+  libbz2-dev libreadline-dev libsqlite3-dev libopencv-dev \
+  build-essential git make
 ## インストールできるバージョンの一覧
 pyenv install --list
 pyenv install 3.9.4
@@ -57,7 +62,7 @@ poetry config --list
 ```bash
 git clone https://github.com/eycjur/cartopy_project_template.git
 cd cartopy_project_template
-poetry  install
+make  install
 ```
 
 以下のファイルをカレントディレクトリにおいてください
@@ -73,7 +78,7 @@ poetry  install
 
 - ブラウザで行う場合
 1. ターミナルで`make jupyter`を実行
-1. ブラウザで http://localhost:8888/lab を開き、jra55.ipynbを開く
+1. ターミナルに表示されるリンクを開き、jra55.ipynbを開く
 
 ### スクリプト形式で実行
 ```bash
@@ -86,7 +91,7 @@ python jra55.py
 poetry以外のパッケージ管理ツールを利用する場合には依存関係がめんどくさいので、以下のバージョンを指定してインストールしてください。  
 情報源が少ないのでいくつかのバージョンを試してみて上手くいったものを採用しています。
 - cartopy==0.19.0.post1
-- Shapely==1.6.0
+- Shapely(--no-binary)
 
 ## Reference
 poetryの使い方
